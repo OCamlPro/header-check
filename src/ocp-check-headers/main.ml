@@ -175,7 +175,7 @@ let rec scan_dir env config dir =
         | None -> ()
         | Some false ->
           if not ( StringSet.mem lfile config.ignore_files ) then
-            check_file env config file dirfile
+            check_file env config lfile dirfile
         | Some true ->
           if Sys.file_exists
               (Filename.concat dirfile ".ocp-check-headers-stop") then
