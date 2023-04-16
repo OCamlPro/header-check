@@ -1,0 +1,31 @@
+opam-version: "2.0"
+name: "ocp-check-headers-deps"
+version: "0.1.0"
+synopsis:
+  "The ocp-check-headers tool checks all source headers in a project using checksums (all deps)"
+description: """\
+This ocp-check-headers tool uses checksums to manage headers in a software
+project. It can list all existing headers, and replace them using checksums
+as identifiers."""
+maintainer: "Fabrice Le Fessant <fabrice.le_fessant@ocamlpro.com>"
+authors: "Fabrice Le Fessant <fabrice.le_fessant@ocamlpro.com>"
+license: "LGPL-2.1-only WITH OCaml-LGPL-linking-exception"
+tags: "org:ocamlpro"
+homepage: "https://ocamlpro.github.io/ocp-check-headers"
+doc: "https://ocamlpro.github.io/ocp-check-headers/sphinx"
+bug-reports: "https://github.com/ocamlpro/ocp-check-headers/issues"
+depends: [
+  "base-bigarray" {= "base+bin+6aa7b5b3+f2cc4984"}
+  "base-threads" {= "base+bin+88ec833a+f2cc4984"}
+  "base-unix" {= "base+bin+6c5a8d56+f2cc4984"}
+  "dune" {= "3.7.0"}
+  "ez_file" {= "0.3.0"}
+  "ocaml" {= "4.14.1"}
+  "ocaml-base-compiler" {= "4.14.1"}
+  "ocaml-config" {= "2"}
+  "ocaml-options-vanilla" {= "1+bin+8afbbae3+f2cc4984"}
+  "ocplib_stuff" {= "0.3.0"}
+  "re" {= "1.10.4"}
+  "seq" {= "base"}
+]
+dev-repo: "git+https://github.com/ocamlpro/ocp-check-headers.git"

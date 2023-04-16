@@ -1,0 +1,104 @@
+# Keep this file in your GIT repo to help drom track generated files
+# begin version
+version:0.9.0
+# end version
+
+# hash of toml configuration files
+# used for generation of all files
+fbb51be2ea2d6b79dec991ff8a6b4e15:.
+# end context for .
+
+# begin context for .github/workflows/workflow.yml
+# file .github/workflows/workflow.yml
+08c78e42922b752981600d789ea9f2fc:.github/workflows/workflow.yml
+# end context for .github/workflows/workflow.yml
+
+# begin context for .gitignore
+# file .gitignore
+c28c7d3242156aecca7ebfc7b4721d06:.gitignore
+# end context for .gitignore
+
+# begin context for CHANGES.md
+# file CHANGES.md
+6a0ce08851fa2c58bf362736cecb6a79:CHANGES.md
+# end context for CHANGES.md
+
+# begin context for LICENSE.md
+# file LICENSE.md
+e31b19b601ab25353ef16d67127735f1:LICENSE.md
+# end context for LICENSE.md
+
+# begin context for Makefile
+# file Makefile
+bf50abae6631bbba2050608fefd22dc8:Makefile
+# end context for Makefile
+
+# begin context for README.md
+# file README.md
+140a1d95cfe67f2da0db011b26ffb52c:README.md
+# end context for README.md
+
+# begin context for drom.toml
+# file drom.toml
+814babcb2fab46d1ee2117a1aa56ff02:drom.toml
+# end context for drom.toml
+
+# begin context for dune
+# file dune
+0d57afa9756f983af2551804954af609:dune
+# end context for dune
+
+# begin context for dune-project
+# file dune-project
+472f97e757d5ede0b1bea29529db5458:dune-project
+# end context for dune-project
+
+# begin context for opam/ocp-check-headers.opam
+# file opam/ocp-check-headers.opam
+3df7c073a5242628a75d9bca9f6d3824:opam/ocp-check-headers.opam
+# end context for opam/ocp-check-headers.opam
+
+# begin context for scripts/after.sh
+# file scripts/after.sh
+62c6489217feef26dac343e709b89c1a:scripts/after.sh
+# end context for scripts/after.sh
+
+# begin context for scripts/before.sh
+# file scripts/before.sh
+371e627833d9ac7ae2f906b5ec97aae2:scripts/before.sh
+# end context for scripts/before.sh
+
+# begin context for scripts/copy-bin.sh
+# file scripts/copy-bin.sh
+bb3a9d286f0dc64021db4194427263ee:scripts/copy-bin.sh
+# end context for scripts/copy-bin.sh
+
+# begin context for scripts/static-build.sh
+# file scripts/static-build.sh
+b243cb6f630e2b0483b76eef1572ff95:scripts/static-build.sh
+# end context for scripts/static-build.sh
+
+# begin context for src/ocp-check-headers/dune
+# file src/ocp-check-headers/dune
+62edab9e486676eb1c4437f2744f1c53:src/ocp-check-headers/dune
+# end context for src/ocp-check-headers/dune
+
+# begin context for src/ocp-check-headers/linking_flags.sh
+# file src/ocp-check-headers/linking_flags.sh
+c7aa7ad8967d43dd0e7ea2f013af7376:src/ocp-check-headers/linking_flags.sh
+# end context for src/ocp-check-headers/linking_flags.sh
+
+# begin context for src/ocp-check-headers/main.ml
+# file src/ocp-check-headers/main.ml
+1a20756b2aeb7729b8649f49a8b11b0a:src/ocp-check-headers/main.ml
+# end context for src/ocp-check-headers/main.ml
+
+# begin context for src/ocp-check-headers/package.toml
+# file src/ocp-check-headers/package.toml
+e515c13dc3cd171047c093b5dd919e64:src/ocp-check-headers/package.toml
+# end context for src/ocp-check-headers/package.toml
+
+# begin context for src/ocp-check-headers/version.mlt
+# file src/ocp-check-headers/version.mlt
+940d29cde7f16cd0916ed1d5f9c41154:src/ocp-check-headers/version.mlt
+# end context for src/ocp-check-headers/version.mlt
