@@ -65,12 +65,12 @@ ocp-check-headers --replace-by DST_ID --from SRC1_ID --from SRC2_ID
 
 During the scan, `ocp-check-headers` uses a default configuration to
 ignore or select files. You can extend this configuration using files
-`.ocp-check-headers-config` in directories (their config will apply to
+`.ocp-check-headers` in directories (their config will apply to
 where they are and their sub-directories). If the default
 configuration is wrong for you, you can use the option `--empty` to
 start with an empty configuration.
 
-The format of `.ocp-check-headers-config` is a list of lines starting
+The format of `.ocp-check-headers` is a list of lines starting
 with a command and a list of space-separated case-insensitive entries
 (comments can be introduced with # at the beginning of the line):
 

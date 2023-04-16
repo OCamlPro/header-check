@@ -28,8 +28,8 @@ let ignore_dirs = [
   "_obuild" ; "_build" ; ".git" ; ".svn" ; "_opam"
 ]
 
-let filename = ".ocp-check-headers-config"
-let filename_bis = ".ocp-check-headers-config-more"
+let filename = ".ocp-check-headers"
+let filename_bis = ".ocp-check-headers-more"
 
 let ignore_files = [
   filename ;
@@ -125,19 +125,19 @@ let load initial filename =
           let set = StringSet.of_list set in
           let config =
             match prefix with
-            | "IGNORE-DIRS" ->
+            | "ignore-dirs" ->
               { config with ignore_dirs = StringSet.union config.ignore_dirs set }
-            | "IGNORE-FILES" ->
+            | "ignore-files" ->
               { config with ignore_files = StringSet.union config.ignore_files set }
-            | "IGNORE-HEADERS" ->
+            | "ignore-headers" ->
               { config with ignore_headers = StringSet.union config.ignore_headers set }
-            | "IGNORE-EXT" ->
+            | "ignore-ext" ->
               { config with ignore_extensions = StringSet.union config.ignore_extensions set }
-            | "ML-EXT" ->
+            | "ml-ext" ->
               { config with ml_extensions = StringSet.union config.ml_extensions set }
-            | "CC-EXT" ->
+            | "cc-ext" ->
               { config with cc_extensions = StringSet.union config.cc_extensions set }
-            | "SH-EXT" ->
+            | "sh-ext" ->
               { config with sh_extensions = StringSet.union config.sh_extensions set }
             | _ ->
               Printf.eprintf "Error in config file %S at line:\n" filename ;
