@@ -8,12 +8,6 @@ This ocp-check-headers tool uses checksums to manage headers in a software
 project. It can list all existing headers, and replace them using checksums
 as identifiers.
 
-
-* Website: https://ocamlpro.github.io/ocp-check-headers
-* General Documentation: https://ocamlpro.github.io/ocp-check-headers/sphinx
-* API Documentation: https://ocamlpro.github.io/ocp-check-headers/doc
-* Sources: https://github.com/ocamlpro/ocp-check-headers
-
 ## Usage
 
 To use, just run:
