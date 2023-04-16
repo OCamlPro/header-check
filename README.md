@@ -16,26 +16,98 @@ as identifiers.
 
 ## Usage
 
-A very simple tool to manage headers of a collection of source
-files. Basically, it helps you:
-(1) collect all the headers and the files to which they are applied,
-(2) add a header to files without one,
-(3) replace a header by another one
+To use, just run:
 
-It is called with a list of directories or files. It then generates 3
-reports called `headers-ml.txt`, `headers-cc.txt` and `headers-sh.txt`
-containing the headers and the files where they were found. Each
-header has a uniq identifier, based on a checksum.
+```
+ocp-check-headers
+```
 
-You can then use these identifiers to add or replace headers. Standard
-headers can be stored in `~/.ocp/check-headers/headers{.ml, .cc, .sh}` files.
+The execution with scan the current directory and sub-directories for
+files, extract headers from them and generate 3 reports :
 
-Also, ocp-check-headers will read per-directory files:
+* `headers-ml.txt` for ML files
+* `headers-cc.txt` for C/C++ files
+* `headers-sh.txt` for SH files
 
-* `.ocp-check-headers-ignore-files` : files or extensions (starting with .) to
-   ignore while scanning directories
+You can then inspect these files to check all the headers present in
+the project. For each header, the header is displayed, with a unique
+ID (checksum) and a list of locations.
 
-* `.ocp-check-headers-ignore-headers`: headers to ignore
+If you are happy, you can then clear temporary files:
+
+```
+ocp-check-headers --clean
+```
+
+After inspection, you might want to add a default header to files with
+no header:
+
+```
+ocp-check-headers --add-default HEADER_ID
+```
+
+Note that only files in the same category as the header can be
+modified (i.e. a ML header can only be added to ML files), so that you
+can specify this option for every category on the same command.
+
+You might also want to replace some headers by other headers:
+
+```
+ocp-check-headers --replace SRC_ID:DST_ID
+```
+
+will replace the source header by the destination header.
+
+Since replacement must always be done using checksums, if you want to
+create a new header, you will need to insert it in a file, do a run to
+get its identifier, and then replace it.
+
+If you want to replace multiple identifiers by the same identifier,
+you can also use:
+
+```
+ocp-check-headers --replace-by DST_ID --from SRC1_ID --from SRC2_ID
+```
+
+During the scan, `ocp-check-headers` uses a default configuration to
+ignore or select files. You can extend this configuration using files
+`.ocp-check-headers-config` in directories (their config will apply to
+where they are and their sub-directories). If the default
+configuration is wrong for you, you can use the option `--empty` to
+start with an empty configuration.
+
+The format of `.ocp-check-headers-config` is a list of lines starting
+with a command and a list of space-separated case-insensitive entries
+(comments can be introduced with # at the beginning of the line):
+
+```
+# files to ignore
+IGNORE-FILES opam meta
+
+# directories to ignore
+IGNORE-DIRS _build .git .svn _opam
+
+# extensions to ignore
+IGNORE-EXT .cmx .cmo .mlt .md .toml
+
+# headers to ignore
+IGNORE-HEADERS fb748e994094746482684
+
+# extensions for the ML files
+ML-EXT .ml .mli .mll .mlp .ml4
+
+# extensions for C/C++ files
+CC-EXT .c .h .cpp .mly .js
+
+# extensions for SH files
+SH-EXT .sh .ac .in .m4
+```
+
+To check the default configuration, use:
+
+```
+ocp-check-headers --show-config
+```
 
 Headers are supposed to start and end with the same beginning of line:
 
@@ -45,4 +117,5 @@ Headers are supposed to start and end with the same beginning of line:
 ########################### for shells
 ```
 
+with internal char repeated at least 50 times.
 
