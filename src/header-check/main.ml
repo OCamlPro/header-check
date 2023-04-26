@@ -178,7 +178,7 @@ let rec scan_dir env config dir =
             check_file env config lfile dirfile
         | Some true ->
           if Sys.file_exists
-              (Filename.concat dirfile ".ocp-check-headers-stop") then
+              (Filename.concat dirfile ".header-check-stop") then
             ()
           else
             scan_dir env config dirfile
@@ -523,7 +523,7 @@ let () =
 
     ] in
   let arg_usage =
-    "ocp-check-headers [OPTIONS] DIRS : check OCaml headers in DIRS" in
+    "header-check [OPTIONS] DIRS : check OCaml headers in DIRS" in
   Arg.parse arg_list (fun dir ->
       args.arg_dirs <- dir :: args.arg_dirs) arg_usage;
   if args.arg_dirs = [] then args.arg_dirs <- ["."];

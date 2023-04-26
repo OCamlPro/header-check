@@ -11,9 +11,9 @@ edition = "4.13.0"
 github-organization = "ocamlpro"
 license = "LGPL2"
 min-edition = "4.07.0"
-name = "ocp-check-headers"
+name = "header-check"
 skeleton = "mini_prg"
-synopsis = "The ocp-check-headers tool checks all source headers in a project using checksums"
+synopsis = "A tool to check and update source headers, using checksums"
 version = "0.1.0"
 
 # keys that you could also define:
@@ -28,9 +28,9 @@ version = "0.1.0"
 
 [project]
 description = """
-This ocp-check-headers tool uses checksums to manage headers in a software
-project. It can list all existing headers, and replace them using checksums
-as identifiers.
+The header-check tool scans a source project, lists all existing headers and
+can be used to update them. It uses checksums to create identifiers for 
+headers and works with OCaml, C/C++ and Shell kinds of comments.
 """
 
 [project]
@@ -77,6 +77,6 @@ share-dirs = ["share"]
 # ...
 
 [[package]]
-dir = "src/ocp-check-headers"
-# edit 'src/ocp-check-headers/package.toml' for package-specific options
+dir = "src/header-check"
+# edit 'src/header-check/package.toml' for package-specific options
 
