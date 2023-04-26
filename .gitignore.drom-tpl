@@ -1,4 +1,4 @@
-/header-check
+!{gitignore-programs}
 *~
 _build
 .merlin
@@ -8,4 +8,4 @@ _build
 /_build
 .drom.config
 *.locked
-
+!(dot-gitignore-trailer)
