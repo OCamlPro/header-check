@@ -20,7 +20,7 @@ all: build
 build:
 	./scripts/before.sh build
 	opam exec -- dune build @install
-	./scripts/copy-bin.sh ocp-check-headers
+	./scripts/copy-bin.sh header-check
 	./scripts/after.sh build
 
 build-deps:

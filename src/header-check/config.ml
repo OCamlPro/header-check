@@ -28,8 +28,8 @@ let ignore_dirs = [
   "_obuild" ; "_build" ; ".git" ; ".svn" ; "_opam"
 ]
 
-let filename = ".ocp-check-headers"
-let filename_bis = ".ocp-check-headers-more"
+let filename = ".header-check"
+let filename_bis = ".header-check-more"
 
 let ignore_files = [
   filename ;
@@ -182,6 +182,6 @@ let show () =
 
           set "extensions for C/C++ files" "CC-EXT" initial.cc_extensions ;
 
-          set "extensions for SH files" "SH-EXT" initial.ml_extensions ;
+          set "extensions for SH files" "SH-EXT" initial.sh_extensions ;
 
         ] )

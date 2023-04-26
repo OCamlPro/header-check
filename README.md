@@ -1,10 +1,10 @@
 
-[![Actions Status](https://github.com/ocamlpro/ocp-check-headers/workflows/Main%20Workflow/badge.svg)](https://github.com/ocamlpro/ocp-check-headers/actions)
-[![Release](https://img.shields.io/github/release/ocamlpro/ocp-check-headers.svg)](https://github.com/ocamlpro/ocp-check-headers/releases)
+[![Actions Status](https://github.com/ocamlpro/header-check/workflows/Main%20Workflow/badge.svg)](https://github.com/ocamlpro/header-check/actions)
+[![Release](https://img.shields.io/github/release/ocamlpro/header-check.svg)](https://github.com/ocamlpro/header-check/releases)
 
-# ocp-check-headers
+# header-check
 
-This ocp-check-headers tool uses checksums to manage headers in a software
+This header-check tool uses checksums to manage headers in a software
 project. It can list all existing headers, and replace them using checksums
 as identifiers.
 
@@ -13,7 +13,7 @@ as identifiers.
 To use, just run:
 
 ```
-ocp-check-headers
+header-check
 ```
 
 The execution with scan the current directory and sub-directories for
@@ -30,14 +30,14 @@ ID (checksum) and a list of locations.
 If you are happy, you can then clear temporary files:
 
 ```
-ocp-check-headers --clean
+header-check --clean
 ```
 
 After inspection, you might want to add a default header to files with
 no header:
 
 ```
-ocp-check-headers --add-default HEADER_ID
+header-check --add-default HEADER_ID
 ```
 
 Note that only files in the same category as the header can be
@@ -47,7 +47,7 @@ can specify this option for every category on the same command.
 You might also want to replace some headers by other headers:
 
 ```
-ocp-check-headers --replace SRC_ID:DST_ID
+header-check --replace SRC_ID:DST_ID
 ```
 
 will replace the source header by the destination header.
@@ -60,17 +60,17 @@ If you want to replace multiple identifiers by the same identifier,
 you can also use:
 
 ```
-ocp-check-headers --replace-by DST_ID --from SRC1_ID --from SRC2_ID
+header-check --replace-by DST_ID --from SRC1_ID --from SRC2_ID
 ```
 
-During the scan, `ocp-check-headers` uses a default configuration to
+During the scan, `header-check` uses a default configuration to
 ignore or select files. You can extend this configuration using files
-`.ocp-check-headers` in directories (their config will apply to
+`.header-check` in directories (their config will apply to
 where they are and their sub-directories). If the default
 configuration is wrong for you, you can use the option `--empty` to
 start with an empty configuration.
 
-The format of `.ocp-check-headers` is a list of lines starting
+The format of `.header-check` is a list of lines starting
 with a command and a list of space-separated case-insensitive entries
 (comments can be introduced with # at the beginning of the line):
 
@@ -100,7 +100,7 @@ SH-EXT .sh .ac .in .m4
 To check the default configuration, use:
 
 ```
-ocp-check-headers --show-config
+header-check --show-config
 ```
 
 Headers are supposed to start and end with the same beginning of line:

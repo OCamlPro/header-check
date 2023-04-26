@@ -1,4 +1,4 @@
-/ocp-check-headers
+/header-check
 *~
 _build
 .merlin
