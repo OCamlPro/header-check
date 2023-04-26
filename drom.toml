@@ -12,7 +12,7 @@ github-organization = "ocamlpro"
 license = "LGPL2"
 min-edition = "4.07.0"
 name = "header-check"
-skeleton = "mini_prg"
+skeleton = "program"
 synopsis = "A tool to check and update source headers, using checksums"
 version = "0.1.0"
 
@@ -34,7 +34,7 @@ headers and works with OCaml, C/C++ and Shell kinds of comments.
 """
 
 [project]
-skip = ["@test", "@sphinx", "docs", "@docs", "@ocamlformat", "@ocp-indent"]
+skip = ["@test", "@ocamlformat", "@ocp-indent"]
 
 # project-wide library dependencies (not for package-specific deps)
 [dependencies]
