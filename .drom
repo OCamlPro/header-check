@@ -5,7 +5,7 @@ version:0.9.0
 
 # hash of toml configuration files
 # used for generation of all files
-edd0879adac52a0dfb83af8626d73824:.
+b612a8535f143a47497759a54e656aa3:.
 # end context for .
 
 # begin context for ./.github/workflows/workflow.yml
@@ -55,7 +55,7 @@ b243cb6f630e2b0483b76eef1572ff95:./scripts/static-build.sh
 
 # begin context for .github/workflows/workflow.yml
 # file .github/workflows/workflow.yml
-8a7053a7ee0d3445c73c5899c5118543:.github/workflows/workflow.yml
+46efc207ae289963644a884d3a843b20:.github/workflows/workflow.yml
 # end context for .github/workflows/workflow.yml
 
 # begin context for .gitignore
@@ -75,13 +75,43 @@ e31b19b601ab25353ef16d67127735f1:LICENSE.md
 
 # begin context for Makefile
 # file Makefile
-fc00fbf8eca56594ddacf7d65c5d6019:Makefile
+7e92705d8d66520a2c0b8dc545da6018:Makefile
 # end context for Makefile
 
 # begin context for README.md
 # file README.md
 140a1d95cfe67f2da0db011b26ffb52c:README.md
 # end context for README.md
+
+# begin context for docs/README.txt
+# file docs/README.txt
+bfbacf00053bb9ab2a6e2ce94ed4a642:docs/README.txt
+# end context for docs/README.txt
+
+# begin context for docs/doc/index.html
+# file docs/doc/index.html
+815c32ac71a3180724eb801e1f371b46:docs/doc/index.html
+# end context for docs/doc/index.html
+
+# begin context for docs/favicon.png
+# file docs/favicon.png
+e739f3026aa997af4026bc428f4c9ef6:docs/favicon.png
+# end context for docs/favicon.png
+
+# begin context for docs/index.html
+# file docs/index.html
+93de325d92d39f8f6c4136a7b83b7189:docs/index.html
+# end context for docs/index.html
+
+# begin context for docs/sphinx/index.html
+# file docs/sphinx/index.html
+cbca8c1ccdb50b495efc6da1ed5fe988:docs/sphinx/index.html
+# end context for docs/sphinx/index.html
+
+# begin context for docs/style.css
+# file docs/style.css
+c8281f46ba9a11d0b61bc8ef67eaa357:docs/style.css
+# end context for docs/style.css
 
 # begin context for drom.toml
 # file drom.toml
@@ -103,11 +133,6 @@ fc00fbf8eca56594ddacf7d65c5d6019:Makefile
 6dd673264b1b1f18816d2a3d4381669b:opam/header-check.opam
 # end context for opam/header-check.opam
 
-# begin context for opam/ocp-check-headers.opam
-# file opam/ocp-check-headers.opam
-3df7c073a5242628a75d9bca9f6d3824:opam/ocp-check-headers.opam
-# end context for opam/ocp-check-headers.opam
-
 # begin context for scripts/after.sh
 # file scripts/after.sh
 62c6489217feef26dac343e709b89c1a:scripts/after.sh
@@ -127,6 +152,36 @@ bb3a9d286f0dc64021db4194427263ee:scripts/copy-bin.sh
 # file scripts/static-build.sh
 b243cb6f630e2b0483b76eef1572ff95:scripts/static-build.sh
 # end context for scripts/static-build.sh
+
+# begin context for sphinx/_static/css/fixes.css
+# file sphinx/_static/css/fixes.css
+20bbe7a5dbb3c3278a1511d960616fe5:sphinx/_static/css/fixes.css
+# end context for sphinx/_static/css/fixes.css
+
+# begin context for sphinx/about.rst
+# file sphinx/about.rst
+a4b8729abc5c7ead7251d01ab092cfa7:sphinx/about.rst
+# end context for sphinx/about.rst
+
+# begin context for sphinx/conf.py
+# file sphinx/conf.py
+813c1f2ec842db89304a1a20ea884068:sphinx/conf.py
+# end context for sphinx/conf.py
+
+# begin context for sphinx/index.rst
+# file sphinx/index.rst
+ccfadd86eaba716dcf38e7d0c53991e3:sphinx/index.rst
+# end context for sphinx/index.rst
+
+# begin context for sphinx/install.rst
+# file sphinx/install.rst
+7bf3c127c62c61e90a0066ebe2ccf24e:sphinx/install.rst
+# end context for sphinx/install.rst
+
+# begin context for sphinx/license.rst
+# file sphinx/license.rst
+7f09d28eb87ab9f2650899f85835e74a:sphinx/license.rst
+# end context for sphinx/license.rst
 
 # begin context for src/header-check/dune
 # file src/header-check/dune
