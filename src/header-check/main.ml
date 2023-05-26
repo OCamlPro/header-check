@@ -37,6 +37,7 @@ type env = {
   headers : (string, header) Hashtbl.t;
   mutable files : (string, file) Hashtbl.t;
   mutable save_to_ignore : StringSet.t;
+  skip_dirs : StringSet.t;
 }
 
 let homedir = try
@@ -151,7 +152,12 @@ let record_header ?(from_config=false) env config file_name header_sep =
 
 
 let rec scan_dir env config dir =
-  let files = Sys.readdir dir in
+  let files =
+    if StringSet.mem dir env.skip_dirs then
+      [||]
+    else
+      Sys.readdir dir
+  in
 
   let config =
     let dirfile = Filename.concat dir Config.filename in
@@ -483,9 +489,15 @@ let () =
   let arg_clean = ref false in
   let arg_show_config = ref false in
 
+  let skip_dirs = ref StringSet.empty in
+
   let arg_list = Arg.align [
       "--empty-config", Arg.Set arg_empty_config,
       " Start with an empty config (and read local config files)";
+
+      "--skip-dir", Arg.String
+        (fun s -> skip_dirs := StringSet.add s !skip_dirs),
+      "DIR Skip directory dir";
 
       "--show-config", Arg.Set arg_show_config,
       " Show the default configuration and exit" ;
@@ -498,7 +510,8 @@ let () =
       "HEADER_ID Add this header as the default for these files";
 
       "--replace", Arg.String (fun s ->
-          args.arg_replace <- s :: args.arg_replace),
+          args.arg_replace <-
+            EzString.split s ',' @ args.arg_replace),
       "SRC:DST Replace header SRC by header DST";
 
       "--replace-by", Arg.String (fun s ->
@@ -565,6 +578,7 @@ let () =
     headers = Hashtbl.create 113;
     files = Hashtbl.create 113;
     save_to_ignore = StringSet.empty;
+    skip_dirs = !skip_dirs ;
   } in
   init_action args env config;
   do_actions args env config;

@@ -150,7 +150,7 @@ bb3a9d286f0dc64021db4194427263ee:scripts/copy-bin.sh
 
 # begin context for scripts/static-build.sh
 # file scripts/static-build.sh
-b243cb6f630e2b0483b76eef1572ff95:scripts/static-build.sh
+cda3f8bad69d9c6e8cbeab1c720d739a:scripts/static-build.sh
 # end context for scripts/static-build.sh
 
 # begin context for sphinx/_static/css/fixes.css
